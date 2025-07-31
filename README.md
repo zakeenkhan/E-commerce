@@ -74,7 +74,7 @@ Before running this application, make sure you have the following installed:
 
 1. Clone the repository:
    ```sh
-   git clone https://github.com/[YOUR-USERNAME]/E-Commerce.git
+   git clone https://github.com/zakeenkhan/E-commerce_main.git
 2. Navigate to the project directory:
    ```sh
    cd E-Commerce
