@@ -1,13 +1,19 @@
 # eCommerce Website
 
-A modern, full-stack eCommerce website I built using the PERN stack (PostgreSQL, Express, React, Node.js). This project showcases a complete online shopping platform with advanced features, secure payment processing, and responsive design.
+A modern, full-stack eCommerce website built using the PERN stack (PostgreSQL, Express, React, Node.js). This project demonstrates a complete online shopping platform with advanced features, secure payment processing, and responsive design.
+
+## 🚀 Live Demo
+
+**[View Live Demo](https://harman-ecommerce.vercel.app/)**
+
+Experience the full functionality of this eCommerce platform with our live demonstration.
 
 ![Desktop](/website-demo-image/desktop.png)
 ![Mobile](/website-demo-image/mobile.png)
 ![Showcase1](/website-demo-image/1.png)
 ![Showcase2](/website-demo-image/2.png)
 
-## Tech Stack
+## 🛠️ Tech Stack
 
 **Frontend:**
 - Next.js 14 with TypeScript
@@ -24,146 +30,128 @@ A modern, full-stack eCommerce website I built using the PERN stack (PostgreSQL,
 - Nodemailer for emails
 - Google OAuth integration
 
-## Features
+## ✨ Features
 
-### eCommerce Features
-- **Categories & Subcategories:** Well-organized categories and subcategories for easy navigation.
-- **Products:** Detailed product pages with options for different sizes and colors.
-- **Payment Gateway:** Integrated with individual products and cart for secure transactions. ( Stripe )
-- **Wishlist:** Option to save favorite products.
-- **Special Deals:** Exclusive deals displayed on the homepage.
-- **Banners:** Eye-catching banners to highlight promotions.
-- **Responsive Design:** Modern and mobile-friendly layout.
-- **Quantity Purchase:** Ability to purchase multiple quantities of a product.
-- **Homepage Algorithms:** Various algorithms to display products dynamically on the homepage.
-- **Filtering & Sorting:** Advanced filtering and sorting options on search and category pages.
-- **JWT Session:** Secure user sessions with JWT.
-- **Encrypted Passwords:** Enhanced security with password encryption.
-- **OAuth Support:** Easy registration and sign-in with OAuth.
-- **Payment on Delivery:** Option to pay upon delivery.
-- **Order Tracking:** Track orders with a detailed orders page.
-- **Order Summary:** Comprehensive order summary page.
-- **Custom Checkout:** Tailored checkout experience.
-- **Review System:** Post, delete, and edit reviews with a dedicated reviews page.
-- **Dynamic Routing:** Smooth navigation with dynamic routing.
-- **Product Quickview:** Quickly view product details and add to cart or go to the product page.
-- **Active Review & Rating Calculation:** Backend will update variables required for algorithms to work properly, actively calculate rating's & frontend required parameters.
+### Core eCommerce Functionality
+- **Product Catalog:** Organized categories and subcategories with detailed product pages
+- **Shopping Cart & Wishlist:** Full cart functionality with wishlist management
+- **Secure Payments:** Stripe integration with multiple payment options including cash on delivery
+- **User Authentication:** JWT-based sessions with Google OAuth support
+- **Order Management:** Complete order tracking and management system
+- **Review System:** Customer reviews with rating calculations
+- **Search & Filter:** Advanced product filtering and sorting capabilities
+- **Responsive Design:** Mobile-first approach with modern UI/UX
 
-### Other Pages
-- **Category Specific Page:** Detailed pages for each category.
-- **Subcategory Page:** Dedicated pages for subcategories.
-- **Blog:** Informative blog section.
-- **Contact Page:** Easy-to-use contact form.
-- **Services Page:** Overview of offered services.
-- **About Us:** Information about the company.
-- **Privacy Policy:** Details on data privacy.
-- **Secure Payment Page:** Information on secure payment methods.
-- **Terms and Conditions:** Detailed terms and conditions.
-- **Refund and Cancellation Policy:** Policies on refunds and cancellations.
+### Additional Features
+- Real-time deal notifications
+- Dynamic homepage algorithms
+- Product quick-view functionality
+- Comprehensive admin dashboard
+- Email notifications
+- Multi-language support ready
+- SEO optimized
 
-## Getting Started
+## 📄 Additional Pages
+- Category and subcategory pages
+- Blog section
+- Contact form
+- Services overview
+- About us
+- Privacy policy
+- Terms and conditions
+- Refund policy
+
+## 🚀 Getting Started
 
 ### Prerequisites
-
-Before running this application, make sure you have the following installed:
 - Node.js (v18 or higher)
 - PostgreSQL (v12 or higher)
 - npm or yarn package manager
 
-## Installation
+### Installation
 
 1. Clone the repository:
-   ```sh
+   ```bash
    git clone https://github.com/zakeenkhan/E-commerce_main.git
+   ```
+
 2. Navigate to the project directory:
-   ```sh
+   ```bash
    cd E-Commerce
-3. Install dependencies for the server:
-   ```sh
-   cd Server & npm install
-4. Install dependencies for the client:
-   ```sh
-   cd ../Client & npm install
-5. Set up environment variables in a .env file for both server and client.
+   ```
 
-## Running the Application (Development)
+3. Install server dependencies:
+   ```bash
+   cd Server && npm install
+   ```
 
-1. Start the Server:
-   ```sh
-   cd Server & npm run dev
-2. Start the client:
-    ```sh
-   cd Client & npm run dev
+4. Install client dependencies:
+   ```bash
+   cd ../Client && npm install
+   ```
 
-## Setting Up PostgreSQL Tables
+5. Configure environment variables (see Environment Variables section below)
 
-1. Create a Database named 'ecommerce'.
-2. Restore the Database using ecommerce.sql with Given SQL File.
-3. Make sure PostgreSQL server is Running, Set up Environment Variables and done.
+### Development Setup
 
-## Project Structure
+1. Start the backend server:
+   ```bash
+   cd Server && npm run dev
+   ```
 
+2. Start the frontend application:
+   ```bash
+   cd Client && npm run dev
+   ```
+
+### Database Setup
+
+1. Create a PostgreSQL database named 'ecommerce'
+2. Import the database schema using the provided `ecommerce.sql` file
+3. Ensure PostgreSQL server is running and environment variables are configured
+
+
+## 🔧 Environment Variables
+
+### Client (.env.local)
+```env
+BACKEND_URL=your_backend_url
+AUTH_KEY=your_auth_key
+JWT_KEY=your_jwt_key
+NEXT_PUBLIC_FRONTEND_GOOGLE_CLIENT_ID=your_google_client_id
+NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=your_stripe_key
+NEXT_PUBLIC_DOMAIN=your_frontend_url
 ```
-E-Commerce/
-├── Client/                 # Next.js frontend application
-│   ├── app/               # Next.js 14 app directory
-│   ├── components/        # Reusable React components
-│   ├── controllers/       # Frontend logic controllers
-│   ├── features/          # Redux slices and features
-│   └── public/           # Static assets
-├── Server/                # Node.js backend API
-│   ├── controller/        # API controllers
-│   ├── data/             # Database configuration
-│   ├── middleware/       # Express middleware
-│   ├── routes/           # API routes
-│   ├── utils/            # Utility functions
-│   └── validators/       # Input validation
-├── website-demo-image/    # Demo screenshots
-└── ecommerce.sql         # Database schema
+
+### Server (.env)
+```env
+FRONTEND_SERVER_ORIGIN=your_frontend_url
+DB_USER=your_db_username
+DB_PASS=your_db_password
+DB_HOST=your_db_host
+DB_PORT=your_db_port
+DB_NAME=your_db_name
+SMTP_USER=your_smtp_email
+SMTP_SUPPORT=your_support_email
+SMTP_HOST=your_smtp_host
+SMTP_SENDERNAME=your_sender_name
+SMTP_PASS=your_smtp_password
+JWT_ENCRYPTION_KEY=your_jwt_encryption_key
+JWT_AUTH_KEY=your_jwt_auth_key
+GOOGLE_CLIENT_ID=your_google_client_id
+GOOGLE_CLIENT_SECRET=your_google_client_secret
+STRIPE_PUBLISHABLE_KEY=your_stripe_key
 ```
 
-## Contributing
-
-Contributions are welcome! Please follow these steps:
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## License
+## 📝 License
 
 This project is licensed under the MIT License. See the LICENSE file for details.
 
+## 👨‍💻 Author
 
+**Made with ❤️ by [Zakeen Khan](https://github.com/zakeenkhan)**
 
-## Environment Variables
+---
 
-### Client Environment Variables
+*This project showcases modern web development practices and serves as a comprehensive example of a full-stack eCommerce solution.*
 
-- **BACKEND_URL** (Cors Requirement)
-- **AUTH_KEY** (Authorization key for Secure Frontend & Backend Communication)
-- **JWT_KEY** (JWT Key for Decryption and encryption)
-- **NEXT_PUBLIC_FRONTEND_GOOGLE_CLIENT_ID** (Google Client ID For OAuth)
-- **NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY** (Stripe Key for payment Gateway)
-- **NEXT_PUBLIC_DOMAIN** (**Optional*** Frontend URL)
-
-### Server Environment Variables
-
-- **FRONTEND_SERVER_ORIGIN** (Frontend Server URL)
-- **DB_USER** (Database UserName)
-- **DB_PASS** (Database Password)
-- **DB_HOST** (Database HostName)
-- **DB_PORT** (Database Port)
-- **DB_NAME** (Database Name)
-- **SMTP_USER** (SMTP UserName (email) )
-- **SMTP_SUPPORT** (Customer Support Email for Contact)
-- **SMTP_HOST** (SMTP HostName)
-- **SMTP_SENDERNAME** (SMTP Sender)
-- **SMTP_PASS** (SMTP Password)
-- **JWT_ENCRYPTION_KEY** (Key for secure encryption and decryption)
-- **JWT_AUTH_KEY** (Authorization key for Secure Frontend & Backend Communication)
-- **GOOGLE_CLIENT_ID** (Google Client ID for OAuth)
-- **GOOGLE_CLIENT_SECRET** (Google Client Secret for OAuth)
-- **STRIPE_PUBLISHABLE_KEY** (Stripe Key for Payment Gateway)
