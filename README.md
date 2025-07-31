@@ -2,7 +2,7 @@
 
 A modern, full-stack eCommerce website built using the PERN stack (PostgreSQL, Express, React, Node.js). This project demonstrates a complete online shopping platform with advanced features, secure payment processing, and responsive design.
 
-## 🚀 Live Demo
+
 
 **[View Live Demo](https://harman-ecommerce.vercel.app/)**
 
