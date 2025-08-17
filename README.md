@@ -1,4 +1,4 @@
-# eCommerce Website
+# E-Commerce Website
 
 A modern, full-stack eCommerce website built using the PERN stack (PostgreSQL, Express, React, Node.js). This project demonstrates a complete online shopping platform with advanced features, secure payment processing, and responsive design.
 
